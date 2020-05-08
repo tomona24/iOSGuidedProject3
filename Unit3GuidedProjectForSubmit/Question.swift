@@ -27,7 +27,7 @@ struct Answer {
 enum AnimalType: Character {
     case dog = "🐶", cat = "🐱", rabbit = "🐰", turtle = "🐢"
     var definition: String {
-            switch self {
+        switch self {
         case .dog:
             return "You are incredibly outgoing. You surround yourself with the people you love and enjoy activities with your friends."
         case .cat:

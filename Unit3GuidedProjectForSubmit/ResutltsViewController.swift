@@ -10,10 +10,9 @@ import UIKit
 
 class ResutltsViewController: UIViewController {
     var responses: [Answer]!
-
+    
     @IBOutlet var resultAnswerLabel: UILabel!
     @IBOutlet var resultDefinitionLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,7 @@ class ResutltsViewController: UIViewController {
     func calculatePersonalityResult() {
         var frequencyOfAnswers: [AnimalType: Int] = [:]
         let responseTypes = responses.map { $0.type }
-
+        
         for response in responseTypes {
             let newCount: Int
             if let oldCount = frequencyOfAnswers[response] {
@@ -43,15 +42,15 @@ class ResutltsViewController: UIViewController {
         
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

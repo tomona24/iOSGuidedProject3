@@ -13,34 +13,34 @@ class QuestionViewController: UIViewController {
     var chosenAnswers : [Answer] = []
     
     let questions: [Question] = [
- Question(text: "Which food do you like the most?", type: .single,
-                   answers: [
-     Answer(text: "Steak", type: .dog),
-     Answer(text: "Fish", type: .cat),
-     Answer(text: "Carrots", type: .rabbit),
-     Answer(text: "Corn", type: .turtle)
-     ]
- ),
- Question(text: "Which activities do you enjoy?", type: .multiple,
-                   answers: [
-     Answer(text: "Swimming", type: .turtle),
-     Answer(text: "Sleeping", type: .cat),
-     Answer(text: "Cuddling", type: .rabbit),
-     Answer(text: "Running", type: .dog)
-     ]
- ),
- Question(text: "How much do you enjoy car rides?", type: .ranged,
-                   answers: [
-     Answer(text: "I dislike them", type: .cat),
-     Answer(text: "I get a little nervous", type: .rabbit),
-     Answer(text: "I berely notice them", type: .turtle),
-     Answer(text: "I love them", type: .dog)
-         ]
-     )
+        Question(text: "Which food do you like the most?", type: .single,
+                 answers: [
+                    Answer(text: "Steak", type: .dog),
+                    Answer(text: "Fish", type: .cat),
+                    Answer(text: "Carrots", type: .rabbit),
+                    Answer(text: "Corn", type: .turtle)
+            ]
+        ),
+        Question(text: "Which activities do you enjoy?", type: .multiple,
+                 answers: [
+                    Answer(text: "Swimming", type: .turtle),
+                    Answer(text: "Sleeping", type: .cat),
+                    Answer(text: "Cuddling", type: .rabbit),
+                    Answer(text: "Running", type: .dog)
+            ]
+        ),
+        Question(text: "How much do you enjoy car rides?", type: .ranged,
+                 answers: [
+                    Answer(text: "I dislike them", type: .cat),
+                    Answer(text: "I get a little nervous", type: .rabbit),
+                    Answer(text: "I berely notice them", type: .turtle),
+                    Answer(text: "I love them", type: .dog)
+            ]
+        )
     ]
     
     var questionIndex = 0
-       
+    
     @IBOutlet var currentQuestionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var rangeStackView: UIStackView!
@@ -62,7 +62,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet var multiSwitch4: UISwitch!
     
     @IBOutlet var singleStackView: UIStackView!
-
+    
     @IBOutlet var singleButton1: UIButton!
     @IBOutlet var singleButton2: UIButton!
     @IBOutlet var singleButton3: UIButton!
@@ -93,18 +93,18 @@ class QuestionViewController: UIViewController {
         case singleButton1:
             chosenAnswers.append(currentAnswers[0])
         case singleButton2:
-             chosenAnswers.append(currentAnswers[1])
-
+            chosenAnswers.append(currentAnswers[1])
+            
         case singleButton3:
-             chosenAnswers.append(currentAnswers[2])
-
+            chosenAnswers.append(currentAnswers[2])
+            
         case singleButton4:
-             chosenAnswers.append(currentAnswers[3])
+            chosenAnswers.append(currentAnswers[3])
         default:
             break
         }
         nextQuestion()
-
+        
     }
     @IBAction func multipleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
@@ -112,7 +112,6 @@ class QuestionViewController: UIViewController {
         if multiSwitch1.isOn {
             chosenAnswers.append(currentAnswers[0])
         }
-       
         if multiSwitch2.isOn {
             chosenAnswers.append(currentAnswers[1])
         }
@@ -132,7 +131,7 @@ class QuestionViewController: UIViewController {
         nextQuestion()
         
     }
-
+    
     
     func updateSingle(using answers: [Answer]) {
         singleStackView.isHidden = false
@@ -143,10 +142,10 @@ class QuestionViewController: UIViewController {
     }
     func updateMultiple(using answers: [Answer]) {
         multipleStackView.isHidden = false
-         multiSwitch1.isOn = false
-         multiSwitch2.isOn = false
-         multiSwitch3.isOn = false
-         multiSwitch4.isOn = false
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
         
         multiLabel1.text = answers[0].text
         multiLabel2.text = answers[1].text
@@ -170,8 +169,8 @@ class QuestionViewController: UIViewController {
         navigationItem.title = "Question #\(questionIndex + 1)"
         currentQuestionLabel.text = currentQuestion.text
         questionProgressView.setProgress(totalProgress, animated: true)
-
-
+        
+        
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
         rangeStackView.isHidden = true
@@ -187,10 +186,10 @@ class QuestionViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "ResultsSegue" {
-                let resultsViewController = segue.destination as! ResutltsViewController
-                resultsViewController.responses = chosenAnswers
-
-            }
+        if segue.identifier == "ResultsSegue" {
+            let resultsViewController = segue.destination as! ResutltsViewController
+            resultsViewController.responses = chosenAnswers
+            
         }
+    }
 }
