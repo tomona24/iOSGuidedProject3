@@ -10,7 +10,7 @@
         <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="Unit3GuidedProjectForSubmit" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@ You?</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Begin Personally Quizz"/>
                                         <connections>
-                                            <segue destination="aGj-Hk-yIy" kind="presentation" modalPresentationStyle="fullScreen" id="e0v-Iq-Msg"/>
+                                            <segue destination="aGj-Hk-yIy" kind="show" id="e0v-Iq-Msg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -82,18 +82,18 @@ You?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="87.723214285714278"/>
+            <point key="canvasLocation" x="787" y="88"/>
         </scene>
         <!--Results-->
         <scene sceneID="0fx-WR-vcj">
             <objects>
                 <viewController id="YqT-OD-XLf" customClass="ResutltsViewController" customModule="Unit3GuidedProjectForSubmit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w4Q-ek-Hgc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dau-gI-00L">
-                                <rect key="frame" x="20" y="383.5" width="374" height="129.5"/>
+                                <rect key="frame" x="20" y="356.5" width="374" height="129.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are a 🐶!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PA-6B-naX">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
@@ -126,7 +126,7 @@ activities with your friends.</string>
                     <navigationItem key="navigationItem" title="Results" id="KaR-J3-21T">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="gdG-uj-yFh">
                             <connections>
-                                <segue destination="CSg-Nk-eGk" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="4Wl-Au-u06"/>
+                                <segue destination="CSg-Nk-eGk" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="zJZ-vJ-hqh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -138,18 +138,18 @@ activities with your friends.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxH-qs-gOh" sceneMemberID="firstResponder"/>
                 <exit id="CSg-Nk-eGk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3579.7101449275365" y="133.92857142857142"/>
+            <point key="canvasLocation" x="3409" y="88"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="hmv-i7-Gaq">
             <objects>
                 <viewController id="qgr-Dd-cFW" customClass="QuestionViewController" customModule="Unit3GuidedProjectForSubmit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAn-F1-30R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vkW-qb-RDp">
-                                <rect key="frame" x="20" y="358" width="46" height="180"/>
+                                <rect key="frame" x="20" y="331" width="46" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y96-hk-0J9">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
@@ -182,7 +182,7 @@ activities with your friends.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vYq-J5-gpj">
-                                <rect key="frame" x="20" y="331" width="374" height="234"/>
+                                <rect key="frame" x="20" y="304" width="374" height="234"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9E-vO-qNp">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
@@ -250,7 +250,7 @@ activities with your friends.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wff-yt-avW">
-                                <rect key="frame" x="20" y="388" width="374" height="120.5"/>
+                                <rect key="frame" x="20" y="361" width="374" height="120.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-dR-6af">
                                         <rect key="frame" x="-2" y="0.0" width="378" height="31"/>
@@ -282,13 +282,13 @@ activities with your friends.</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX7-nA-gGa">
-                                <rect key="frame" x="20" y="108" width="374" height="38.5"/>
+                                <rect key="frame" x="20" y="76" width="374" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VJM-sa-nKH">
-                                <rect key="frame" x="40" y="840" width="334" height="2"/>
+                                <rect key="frame" x="40" y="786" width="334" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -344,8 +344,9 @@ activities with your friends.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aGj-Hk-yIy" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cz2-hC-jBl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fFY-rE-DVr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
